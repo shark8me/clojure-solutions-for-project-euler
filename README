@@ -1,1 +1,5 @@
 This project has solutions for some of the Project Euler problems that I solved, in Clojure.
+
+The filenames refer to the problem number.
+For e.g. to see the problem 12, go to 
+http://projecteuler.net/index.php?section=problems&id=12, and replace the value of "id=" to see other problems. 
