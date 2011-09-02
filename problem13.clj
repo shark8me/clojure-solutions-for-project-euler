@@ -1,4 +1,4 @@
-(ns problem13)
+(ns problem13) 
 
 (def p13input 
       [37107287533902102798797998220837590246510135740250,
@@ -103,6 +103,9 @@
       53503534226472524250874054075591789781264330331690]
       )
 
+(defn numsplit [num]
+     (map #(. Integer parseInt %) (rest (seq (. (str num) split "")))))
+     
 (defn nthsum [index]
      (apply + (map (comp #(nth % index) numsplit) p13input)))
 

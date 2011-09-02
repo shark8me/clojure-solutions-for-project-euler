@@ -1,4 +1,4 @@
-(ns problem22)
+(ns problem22 (:use clojure.test))
 
 (def alphamap 
      (zipmap (map keyword '(A B C D E F G H I J K L M N O P Q R S T U V W X Y Z)) (range 1 27) ))
@@ -8,6 +8,8 @@
 
 (defn getNumbersForWord [word]
         (map #(get alphamap %) (map keyword ((comp rest seq) (. word split "")))))
+
+(is (= '(1 2 3 4) (getNumbersForWord "ABCD")))
 
 (defn soln22 []
 (let [words  (getWords)
